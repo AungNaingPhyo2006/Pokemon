@@ -1,0 +1,18 @@
+{
+    "extends": "@tsconfig/react-native/tsconfig.json",
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "moduleResolution": "node",
+      "typeRoots" : ["node_modules/@types", "src/types"],
+      "baseUrl": ".",
+      "paths": {
+        "*": ["src/*"],
+        "@components/*": ["src/components/*"],
+        "@constants/*" : ["src/constants/*"],
+        "@navigation/drawer/*" : ["src/navigation/drawer/*"],
+        "@navigation/stacks/*" : ["src/navigation/stacks/*"],
+      },
+      
+    }
+  }

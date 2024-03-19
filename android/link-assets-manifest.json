@@ -1,0 +1,101 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/animation.json",
+      "sha1": "b3a8345843c31451ad3f1c8a1aee2ffca19ce13c"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue LTW0697BlkCnObl/Helvetica Neue LTW0697BlkCnObl.otf",
+      "sha1": "aa15d490de5ab783aa55e449e03cc68821093e57"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue LTW0697BlkCnObl/Helvetica Neue LTW0697BlkCnObl.ttf",
+      "sha1": "3eb14a7eb60ece535a875f7a8d2bfc4b2a5d546a"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue Medium Extended/Helvetica Neue Medium Extended.otf",
+      "sha1": "f016522542e1b967c804e3861d130c84132c0665"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue Medium Extended/Helvetica Neue Medium Extended.ttf",
+      "sha1": "b5b28fe91c314a44ccd3795f2cc42a0a17e2d720"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue UltraLight/Helvetica Neue UltraLight.otf",
+      "sha1": "48849a4f4e62f6360610dc794095861e1da033e5"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue UltraLight/Helvetica Neue UltraLight.ttf",
+      "sha1": "790a1973764c34d2d74568105a50fd1c820d9d89"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue W01 66 Medium It/Helvetica Neue W01 66 Medium It.otf",
+      "sha1": "f1cf5643512709b30669d72576e40553ffbf865d"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue W01 66 Medium It/Helvetica Neue W01 66 Medium It.ttf",
+      "sha1": "69941d92a4a7d47540f9d35f070580a66b25e1e6"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue W01 77 Bd Cn Obl/Helvetica Neue W01 77 Bd Cn Obl.otf",
+      "sha1": "f0fc934355357df46af36c636936770aa6eb38bd"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue W01 77 Bd Cn Obl/Helvetica Neue W01 77 Bd Cn Obl.ttf",
+      "sha1": "316c3faa7c2d3f54d88de9ed74a6f0792adbafa9"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue W01 87 Hv Cn Obl/Helvetica Neue W01 87 Hv Cn Obl.otf",
+      "sha1": "624e3329076085dc1ed3da9505abeee58c53ab5d"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica Neue W01 87 Hv Cn Obl/Helvetica Neue W01 87 Hv Cn Obl.ttf",
+      "sha1": "9f20cad2140426a3ad278321c4b106281dd69155"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica NeueLTW0693BlkExtObl/Helvetica NeueLTW0693BlkExtObl.otf",
+      "sha1": "c15847c46c2134dfefba3bf0a80e20805b5bf713"
+    },
+    {
+      "path": "src/assets/fonts/Helvetica NeueLTW0693BlkExtObl/Helvetica NeueLTW0693BlkExtObl.ttf",
+      "sha1": "f82fdebf82c123f10290cc4e767f1b0c6e54b93d"
+    },
+    {
+      "path": "src/assets/images/car1.png",
+      "sha1": "e7e3ec4237e74b7c03f625c36174a559f05e93aa"
+    },
+    {
+      "path": "src/assets/images/car2.png",
+      "sha1": "9695a0694925268bc1b100acb1e361844aa8f110"
+    },
+    {
+      "path": "src/assets/images/car3.png",
+      "sha1": "4d45b1c8878a9a8f4e041ddc3637e19575330a25"
+    },
+    {
+      "path": "src/assets/images/car4.png",
+      "sha1": "796ed24ca2748ea79f59d076bf78fe1338470f1b"
+    },
+    {
+      "path": "src/assets/images/car5.png",
+      "sha1": "0f0f238c37d0fca90ef47e5cb137a5b6615de140"
+    },
+    {
+      "path": "src/assets/images/CarIcon.png",
+      "sha1": "7916e4b8d25c274e10b42bdd973ab6c55546af3b"
+    },
+    {
+      "path": "src/assets/images/evlogo.png",
+      "sha1": "7865a88c687b4638e08fb612b347d69af19c555a"
+    },
+    {
+      "path": "src/assets/images/evlogowhite.png",
+      "sha1": "cbc5f5c6f2e078f70dd3c683c598b3d03aa59fff"
+    },
+    {
+      "path": "src/assets/welcome.json",
+      "sha1": "97c197efb697eb0ee816553c37872fad1ff1ef6c"
+    }
+  ]
+}
