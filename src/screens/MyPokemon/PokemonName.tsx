@@ -63,8 +63,6 @@ const PokemonName = (props: propsType) => {
     </Card>
   );
 
- 
-
   const handleSeeMore = async (url: string) => {
     setWaitMe('Please wait!')
 

@@ -10,9 +10,9 @@ type propsType = NativeStackScreenProps<stackScreens, "PokemonList">
 const PokemonList = (props : propsType) => {
     const {navigation} = props;
     const url = 'https://api.pokemontcg.io/v2/cards'; // URL for cards
-    const { cards: initialCards, isLoading, isError } = usePokemonAPI(url);
-    const [cards, setCards] = useState(initialCards);
-    const [visibleCards, setVisibleCards] = useState(cards.slice(0, 10)); 
+    const { cards, isLoading, isError } = usePokemonAPI(url);
+    // const [cards, setCards] = useState(initialCards);
+    // const [visibleCards, setVisibleCards] = useState(cards.slice(0, 10)); 
     const [isFetching, setIsFetching] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedSets, setSelectedSets] = useState<string[]>([]);
@@ -65,17 +65,14 @@ const PokemonItem = ({item,imageUrl, onPress }:any) => {
     navigation.navigate('PokemonDetails', { item });
   };
 
-  useEffect(() => {
+  const searchData = () => {
     const filteredCards = initialCards.filter(card =>
       card.name.toLowerCase().includes(searchQuery.toLowerCase()) 
     );
     setCards(filteredCards);
     setVisibleCards(filteredCards.slice(0, 10));
-  }, [initialCards, searchQuery,]);
-
-
-
-
+    }
+ 
 
   // <==============>
   return (
@@ -84,19 +81,19 @@ const PokemonItem = ({item,imageUrl, onPress }:any) => {
       <View style={{flex:1 , backgroundColor:'cyan'}}>
        <Text variant="titleLarge" style={styles.titleStyle}>Pokemon List</Text>
         <Divider style={{backgroundColor:"red", marginHorizontal:12}} bold={true}/>
-         <View style={{margin:12,borderRadius:12,overflow:'hidden'}}>
+         {/* <View style={{margin:12,borderRadius:12,overflow:'hidden'}}>
            <TextInput
               label="Search by name"
               value={searchQuery}
               onChangeText={text => setSearchQuery(text)}
             />
-         </View>
+         </View> */}
 
         <FlatList
             ListFooterComponent={isFetching ? <ActivityIndicator animating={true} color={MD2Colors.blue300} size={"large"}/> : null}
             onEndReached={handleEndReached} 
             onEndReachedThreshold={0.1} 
-            data={visibleCards}
+            data={cards}
             keyExtractor={(item: { id: any }) => item.id}
             numColumns={2}
             renderItem={({ item }: any) => (
