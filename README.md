@@ -16,7 +16,7 @@
 
 Welcome to my project! Here are some pictures of my projects:
 
-            ![image1](https://github.com/AungNaingPhyo2006/Pokemon/assets/115768795/ca4d25ca-b64b-4ba9-8cd5-521a4c90e3b9)
+![image1](https://github.com/AungNaingPhyo2006/Pokemon/assets/115768795/ca4d25ca-b64b-4ba9-8cd5-521a4c90e3b9)
 
 ![image2](https://github.com/AungNaingPhyo2006/Pokemon/assets/115768795/35db678d-2c70-492d-a492-5a58e5d4dec1)
 
