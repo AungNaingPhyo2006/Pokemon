@@ -13,6 +13,12 @@ export type stackScreens ={
   PokemonList : undefined;
   PokemonDetails: {item : any};
   PokemonName : undefined;
-  SearchPokemon : {url : any};
+  SearchPokemon: {
+    abilities: any;
+    moves: any;
+    species: any;
+    stats: any;
+    types: any;
+  };
 }
 
