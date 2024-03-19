@@ -8,6 +8,7 @@ import SearchBar from 'components/searchBar/SearchBar';
 import { usePokemonAPI } from 'utils/ApiUtils';
 import axios from 'axios';
 
+
 type propsType = NativeStackScreenProps<stackScreens, "PokemonName">;
 
 const PokemonName = (props: propsType) => {

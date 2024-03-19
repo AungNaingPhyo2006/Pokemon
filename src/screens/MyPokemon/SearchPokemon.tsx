@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { stackScreens } from 'navigation/Types';
 import { Avatar, Button, Card, Text } from 'react-native-paper';
+import Header from 'components/header/Header';
 
 type propsType = NativeStackScreenProps<stackScreens, "SearchPokemon">;
 const SearchPokemon = (props:propsType) => {
@@ -41,7 +42,9 @@ const SearchPokemon = (props:propsType) => {
     <SafeAreaView style={{flex:1}}>
       <View style={{flex:1}}>
       <View style={styles.container}>
-        <Text variant="titleLarge" style={styles.titleStyle}>Pokemon Abilities</Text>
+         <Header>
+         Pokemon Abilities
+        </Header>
       </View>
        <ScrollView style={styles.scrollViewStyle}>
             

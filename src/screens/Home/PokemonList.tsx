@@ -1,8 +1,8 @@
-import React, {  useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { stackScreens } from 'navigation/Types'
 import { usePokemonAPI } from 'utils/ApiUtils'
-import { Button, Card, FAB, Text, ActivityIndicator, MD2Colors, Divider} from 'react-native-paper';
+import { Button, Card, FAB, Text, ActivityIndicator, MD2Colors, Divider,TextInput} from 'react-native-paper';
 import { FlatList, SafeAreaView, StyleSheet, View } from 'react-native';
 
 type propsType = NativeStackScreenProps<stackScreens, "PokemonList">
@@ -10,10 +10,14 @@ type propsType = NativeStackScreenProps<stackScreens, "PokemonList">
 const PokemonList = (props : propsType) => {
     const {navigation} = props;
     const url = 'https://api.pokemontcg.io/v2/cards'; // URL for cards
-    const { cards, isLoading, isError } = usePokemonAPI(url);
+    const { cards: initialCards, isLoading, isError } = usePokemonAPI(url);
+    const [cards, setCards] = useState(initialCards);
     const [visibleCards, setVisibleCards] = useState(cards.slice(0, 10)); 
     const [isFetching, setIsFetching] = useState(false);
-   
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedSets, setSelectedSets] = useState<string[]>([]);
+    const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+    const [selectedRarities, setSelectedRarities] = useState<string[]>([]);
     if (isLoading) {
         return (
           <View style={styles.loadingContainer}>
@@ -61,17 +65,37 @@ const PokemonItem = ({item,imageUrl, onPress }:any) => {
     navigation.navigate('PokemonDetails', { item });
   };
 
+  useEffect(() => {
+    const filteredCards = initialCards.filter(card =>
+      card.name.toLowerCase().includes(searchQuery.toLowerCase()) 
+    );
+    setCards(filteredCards);
+    setVisibleCards(filteredCards.slice(0, 10));
+  }, [initialCards, searchQuery,]);
+
+
+
+
+
+  // <==============>
   return (
     <SafeAreaView style={{flex:1}}>
     <View style={{flex:1 , backgroundColor:'tomato'}}>
       <View style={{flex:1 , backgroundColor:'cyan'}}>
-       <Text variant="titleLarge" style={{alignSelf:'center',marginVertical:12, fontWeight:'bold',letterSpacing:5}}>Pokemon List</Text>
-       <Text variant="bodyLarge" style={{alignSelf:'center',letterSpacing:3}}>Total [{visibleCards.length}/{cards.length}]</Text>
+       <Text variant="titleLarge" style={styles.titleStyle}>Pokemon List</Text>
         <Divider style={{backgroundColor:"red", marginHorizontal:12}} bold={true}/>
+         <View style={{margin:12,borderRadius:12,overflow:'hidden'}}>
+           <TextInput
+              label="Search by name"
+              value={searchQuery}
+              onChangeText={text => setSearchQuery(text)}
+            />
+         </View>
+
         <FlatList
             ListFooterComponent={isFetching ? <ActivityIndicator animating={true} color={MD2Colors.blue300} size={"large"}/> : null}
-            onEndReached={handleEndReached} // Load more data when end of list is reached
-            onEndReachedThreshold={0.1} // Load more when 10% from the end
+            onEndReached={handleEndReached} 
+            onEndReachedThreshold={0.1} 
             data={visibleCards}
             keyExtractor={(item: { id: any }) => item.id}
             numColumns={2}
@@ -83,7 +107,7 @@ const PokemonItem = ({item,imageUrl, onPress }:any) => {
         />
         
         <FAB
-            label="Up"
+            label="*"
             style={{  position: 'absolute',
             margin: 16,
             right: 0,
@@ -125,5 +149,6 @@ const styles = StyleSheet.create({
     imageStyle : { 
         width: '100%', 
         height: '100%' 
-    }
+    },
+    titleStyle:{alignSelf:'center',marginVertical:12, fontWeight:'bold',letterSpacing:5 ,color:'blue'},
 })

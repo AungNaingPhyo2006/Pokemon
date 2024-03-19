@@ -19,5 +19,5 @@ export function usePokemonAPI(url:any) {
   }
 
 //   https://api.pokemontcg.io/v2/sets/<id>
-//https://api.pokemontcg.io/v2/types
+// https://api.pokemontcg.io/v2/types
 // https://api.pokemontcg.io/v2/rarities
