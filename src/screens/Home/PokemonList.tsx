@@ -103,14 +103,14 @@ const PokemonItem = ({item,imageUrl, onPress }:any) => {
             )}
         />
         
-        <FAB
+        {/* <FAB
             label="*"
             style={{  position: 'absolute',
             margin: 16,
             right: 0,
             bottom: 0,}}
             onPress={handleEndReached}
-         />
+         /> */}
   
       </View>
        
